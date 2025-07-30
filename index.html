@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website Lovely - nơi chia sẻ tình yêu thương.">
+    <title>Lovely</title>
+    <link rel="icon" href="https://github.com/Panbap/anh/blob/main/icon1.png?raw=true" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Playpen Sans", cursive;
+            background-color: #ffffff;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img {
+            width: 250px;
+            margin-bottom: 20px;
+            transition: all 0.5s ease;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-family: "Playpen Sans", cursive;
+            font-weight: 700;
+            color: #ff8282;
+            text-shadow: 1px 1px 0 #e4e4e4;
+            margin-bottom: 30px;
+            text-align: center;
+            transition: all 0.5s ease;
+            text-shadow:
+                1px 1px 0 #e4e4e4,
+                2px 2px 0 #e4e4e4;
+        }
+
+        h2:hover {
+            transform: perspective(400px) translateZ(10px) scale(1.05);
+        }
+
+        .button-wrapper {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        button {
+            font-family: "Playpen Sans", cursive;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s;
+            border-radius: 25px;
+            color: #ef9a9a;
+            font-weight: 600;
+        }
+
+        #yesBtn {
+            background: linear-gradient(#fff);
+            box-shadow: 0 2px 5px #ef9a9a;
+            border: 2px solid #ef9a9a;
+            animation: jump 3s ease-in-out infinite;
+        }
+
+        #noBtn {
+            background: linear-gradient(#fff);
+            box-shadow: 0 2px 5px #ef9a9a;
+            border: 2px solid #ef9a9a;
+            transition: left 0.2s ease, top 0.2s ease;
+        }
+
+        @keyframes jump {
+
+            0%,
+            25%,
+            75%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <img id="main-img" src="./assets/images/3.gif" alt="Hình ảnh" />
+    <h2 id="main-text">Em có yêu anh không?</h2>
+
+    <div class="button-wrapper" id="button-wrapper">
+        <button id="yesBtn">Dạ</button>
+        <button id="noBtn">Hông</button>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById('noBtn');
+        const yesBtn = document.getElementById('yesBtn');
+        const img = document.getElementById('main-img');
+        const text = document.getElementById('main-text');
+        const wrapper = document.getElementById('button-wrapper');
+
+        function moveNoButton() {
+            noBtn.style.position = 'fixed';
+
+            const maxX = window.innerWidth - noBtn.offsetWidth;
+            const maxY = window.innerHeight - noBtn.offsetHeight;
+
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            noBtn.style.left = `${randomX}px`;
+            noBtn.style.top = `${randomY}px`;
+        }
+
+        noBtn.addEventListener('mouseenter', moveNoButton);
+
+        noBtn.addEventListener('touchstart', function (e) {
+            e.preventDefault();
+            moveNoButton();
+        });
+
+        yesBtn.addEventListener('click', () => {
+
+            wrapper.style.display = 'none';
+
+            img.src = './assets/images/1.gif';
+
+            text.textContent = 'Anh yêu em nhiều lắm';
+        });
+
+        function moveNoButton() {
+            noBtn.style.position = 'fixed';
+
+            const maxX = window.innerWidth - noBtn.offsetWidth;
+            const maxY = window.innerHeight - noBtn.offsetHeight;
+
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            noBtn.style.left = `${randomX}px`;
+            noBtn.style.top = `${randomY}px`;
+        }
+
+        noBtn.addEventListener('mouseenter', moveNoButton);
+        noBtn.addEventListener('touchstart', function (e) {
+            e.preventDefault();
+            moveNoButton();
+        });
+
+        function _0x9c81(_0x493ca8,_0x389584){const _0x29bb11=_0x29bb();return _0x9c81=function(_0x9c810e,_0x793888){_0x9c810e=_0x9c810e-0x1b8;let _0x5b7493=_0x29bb11[_0x9c810e];return _0x5b7493;},_0x9c81(_0x493ca8,_0x389584);}const _0x1bb974=_0x9c81;(function(_0x2bf83c,_0x57fd6a){const _0x47aa21=_0x9c81,_0xd9669a=_0x2bf83c();while(!![]){try{const _0x5d1beb=-parseInt(_0x47aa21(0x1cc))/0x1*(-parseInt(_0x47aa21(0x1b8))/0x2)+parseInt(_0x47aa21(0x1be))/0x3*(parseInt(_0x47aa21(0x1ce))/0x4)+parseInt(_0x47aa21(0x1c3))/0x5+-parseInt(_0x47aa21(0x1ca))/0x6+parseInt(_0x47aa21(0x1c4))/0x7+-parseInt(_0x47aa21(0x1c6))/0x8+-parseInt(_0x47aa21(0x1c7))/0x9;if(_0x5d1beb===_0x57fd6a)break;else _0xd9669a['push'](_0xd9669a['shift']());}catch(_0x374de4){_0xd9669a['push'](_0xd9669a['shift']());}}}(_0x29bb,0x72671));function getQueryParam(_0x1f9c02){const _0x40094b=_0x9c81;return new URLSearchParams(window[_0x40094b(0x1c1)]['search'])[_0x40094b(0x1bd)](_0x1f9c02);}function base64DecodeUnicode(_0xb33e01){const _0x766327=_0x9c81;return decodeURIComponent(Array[_0x766327(0x1b9)][_0x766327(0x1c2)][_0x766327(0x1ba)](atob(_0xb33e01),_0x4a040e=>'%'+('00'+_0x4a040e['charCodeAt'](0x0)[_0x766327(0x1c9)](0x10))['slice'](-0x2))[_0x766327(0x1bf)](''));}window[_0x1bb974(0x1c5)](_0x1bb974(0x1cb),()=>{const _0xae442f=_0x1bb974,_0x527997=new URLSearchParams(window[_0xae442f(0x1c1)][_0xae442f(0x1bb)])[_0xae442f(0x1bd)]('id');if(_0x527997)try{const _0x5de39f=base64DecodeUnicode(_0x527997),_0x1478ce=JSON['parse'](_0x5de39f);_0x1478ce['l']&&(img['src']=_0x1478ce['l']),_0x1478ce['n']&&(text[_0xae442f(0x1cf)]=_0x1478ce['n']),_0x1478ce['g']&&(yesBtn[_0xae442f(0x1cf)]=_0x1478ce['g']),_0x1478ce['h']&&(noBtn[_0xae442f(0x1cf)]=_0x1478ce['h']),yesBtn[_0xae442f(0x1c5)](_0xae442f(0x1cd),()=>{const _0x4aa799=_0xae442f;wrapper['style']['display']='none',img['src']=_0x1478ce['m']||_0x4aa799(0x1c0),text[_0x4aa799(0x1cf)]=_0x1478ce['o']||_0x4aa799(0x1c8);});}catch(_0x444a2c){console['error'](_0xae442f(0x1bc),_0x444a2c);}});function _0x29bb(){const _0x5ec08a=['4062648tBRlRL','DOMContentLoaded','1cehWoV','click','674132kwnCLK','textContent','1796362hiPuWg','prototype','call','search','Không\x20thể\x20giải\x20mã\x20dữ\x20liệu:','get','3PFWazu','join','./assets/images/1.gif','location','map','3250415xDfatI','4769037JLaJfc','addEventListener','153976DadAvz','11098260waGaMl','Anh\x20yêu\x20em\x20nhiều\x20lắm','toString'];_0x29bb=function(){return _0x5ec08a;};return _0x29bb();}
+    </script>
+
+</body>
+
+</html>
